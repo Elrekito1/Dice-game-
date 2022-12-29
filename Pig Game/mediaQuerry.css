@@ -1,0 +1,10 @@
+@media (max-width: 800px) {
+  .rollDice {
+    display: grid;
+    width: 30%;
+    height: 5%;
+    position: relative;
+    left: 90%;
+    bottom: 130%;
+  }
+}

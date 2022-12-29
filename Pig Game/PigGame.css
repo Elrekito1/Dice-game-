@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  background: url("Imagens/vaporwave-abstract-background-retro-computer-interface-worktable-checkered-floor-wallpaper-vaporwave-abstract-background-191420437.jpg");
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+  background: transparent;
+}
+
+.box {
+  display: grid;
+  text-align: center;
+  font-size: 25px;
+  height: 100%;
+  max-width: 800px;
+  backdrop-filter: blur(5px);
+}
+.box h3 {
+  font-size: 40px;
+}
+
+.box2 {
+  position: relative;
+  right: 100%;
+  bottom: 100%;
+
+  text-align: center;
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+    rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+.box1 {
+  text-align: center;
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+    rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+
+.zero1,
+.zero2 {
+  display: grid;
+  position: relative;
+  bottom: 55%;
+  text-align: center;
+}
+.zero2 {
+  position: relative;
+  right: 10px;
+}
+.zero1 {
+  position: relative;
+  right: 12px;
+}
+
+.NewGame {
+  display: grid;
+  width: 30%;
+  height: 5%;
+  place-items: center;
+  position: relative;
+  right: 15%;
+  bottom: 196%;
+}
+.NewGame button {
+  border-radius: 30px;
+  padding: 5px;
+}
+
+.current {
+  display: grid;
+
+  width: 55%;
+  height: 40%;
+  border-radius: 10px;
+  text-align: center;
+  background-color: transparent;
+  filter: blur(0.3px);
+}
+.current h3 {
+  font-size: 25px;
+}
+.current1 {
+  position: relative;
+  left: 120%;
+  bottom: 50%;
+}
+.current2 {
+  position: relative;
+  left: 20%;
+  bottom: 90%;
+}
+
+.hold {
+  display: grid;
+  width: 20%;
+  height: 5%;
+  position: relative;
+  left: 90%;
+  bottom: 117%;
+}
+.clicaveisBaixo button {
+  border-radius: 30px;
+  padding: 7px;
+}
+
+.rollDice {
+  display: grid;
+  width: 20%;
+  height: 5%;
+  position: relative;
+  left: 90%;
+  bottom: 130%;
+}
+
+button {
+  background: cornflowerblue;
+  filter: blur(0.3px);
+}
+
+@media (max-width: 1100px) and (min-width: 510px) {
+  .rollDice {
+    display: grid;
+    width: 30%;
+    height: 2%;
+    position: relative;
+    left: 85%;
+    bottom: 130%;
+  }
+  .hold {
+    display: grid;
+    width: 20%;
+    height: 5%;
+    position: relative;
+    left: 90%;
+    bottom: 110%;
+  }
+  .dice {
+    position: relative;
+    top: 20px;
+    left: 47%;
+  }
+}
+
+@media (max-width: 500px) {
+  .NewGame {
+    display: grid;
+    width: 30%;
+    height: 5%;
+    place-items: center;
+    position: relative;
+    right: 15%;
+    bottom: 181%;
+  }
+  .hold {
+    display: grid;
+    width: 20%;
+    height: 5%;
+    position: relative;
+    left: 88%;
+    bottom: 110%;
+  }
+
+  .dice {
+    position: relative;
+    top: 100px;
+    left: 47%;
+  }
+}
+
+@media (max-width: 499px) {
+  .dice {
+    position: relative;
+    top: 70px;
+    left: 47%;
+  }
+}
+
+/*Sobre a imagem */
+
+@media (max-width: 2000px) and (min-width: 1200px) {
+  .dice {
+    /* div*/
+    position: relative;
+    left: 47%;
+    top: 500px;
+  }
+}
+.hidden1 {
+  display: none;
+}
+
+.dice {
+  box-shadow: 5px 5px 5px 5px black;
+}
+
+@keyframes animacao-dado {
+  /*Criar a animação separadamente, e copiar o nome
+  como identificador no local que quer*/
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.dice {
+  animation-name: animacao-dado;
+  animation-duration: 4s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+
+.player--active {
+  backdrop-filter: blur(0px);
+}
